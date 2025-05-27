@@ -1,0 +1,273 @@
+/* Responsive Styles */
+@media (min-width: 768px) {
+  /* Show desktop blobs */
+  .bg-blob {
+    display: block;
+  }
+
+  /* Adjust hero layout */
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    padding: var(--section-spacing) var(--container-padding);
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  /* Footer layout */
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .copyright {
+    order: 1;
+  }
+
+  .footer-legal {
+    order: 2;
+  }
+
+  /* CTA layout */
+  .cta-container {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .cta-content {
+    text-align: left;
+  }
+
+  .cta-visual {
+    height: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    gap: 2rem;
+  }
+  
+  .visual-container {
+    height: 400px;
+  }
+  
+  .steps-container {
+    flex-direction: column;
+  }
+  
+  .step-connector {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile navigation */
+  .nav-links {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 3rem 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-150%);
+    transition: transform 0.3s ease-out;
+    z-index: 99;
+    gap: 1.5rem;
+  }
+  
+  .nav-links.active {
+    transform: translateY(0);
+  }
+  
+  .mobile-menu-btn {
+    display: flex;
+  }
+  
+  .nav-link {
+    font-size: 1.1rem;
+    padding: 0.75rem 0;
+  }
+
+  /* Stack steps and features */
+  .steps-container,
+  .features-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Adjust footer links */
+  .footer-links-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  /* Adjust testimonial layout */
+  .testimonials-container {
+    height: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Typography adjustments */
+  .hero-headline {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  
+  .hero-subhead {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  
+  .cta-title {
+    font-size: 1.8rem;
+  }
+  
+  .cta-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Visual adjustments */
+  .visual-container {
+    height: 300px;
+    margin-top: 2rem;
+  }
+
+  /* Single column footer links */
+  .footer-links-container {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Adjust project grid */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Adjust modal layout */
+  .modal-content {
+    flex-direction: column;
+  }
+  
+  .modal-image {
+    height: 200px;
+  }
+}
+
+/* Animations */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes blobFloat {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, 20px);
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 20px);
+    opacity: 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.7;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    padding-top: 0;
+    background: white;
+    color: black;
+  }
+
+  .main-header,
+  .main-footer,
+  .mobile-floating,
+  .bg-blob,
+  .cta-decoration {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+
+  section {
+    page-break-before: avoid;
+    page-break-after: avoid;
+    padding: 2rem 0 !important;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+}

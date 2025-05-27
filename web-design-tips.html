@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Tips | Example</title>
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        .tips-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .tip-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+        .tip-card h3 {
+            color: var(--electric-indigo);
+            margin-bottom: 1rem;
+        }
+        .tip-card .tip-category {
+            display: inline-block;
+            background: rgba(92, 51, 246, 0.1);
+            color: var(--electric-indigo);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+        .tip-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        .popular-tips {
+            margin: 4rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Reuse your header from index.html -->
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="#" class="logo" aria-label="Example Home">
+                <svg viewBox="0 0 100 100" class="logo-svg">
+                    <path d="M20,50 Q50,20 80,50 Q50,80 20,50" fill="none" stroke="currentColor" stroke-width="2" />
+                </svg>
+                Example<span class="logo-dot">.</span>
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+                    <li><a href="index.html#features" class="nav-link">Features</a></li>
+                    <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                    <!-- <li><a href="#testimonials" class="nav-link">Testimonials</a></li> -->
+                    <li><a href="index.html#cta-section" class="nav-link contact-link">Get Started</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="tips-main">
+        <section class="section-header">
+            <h1>Web Design Tips</h1>
+            <p>Expert advice to improve your website's performance and user experience</p>
+            <div class="section-divider"></div>
+        </section>
+
+        <section class="popular-tips">
+            <div class="section-header">
+                <h2>Most Popular Tips</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <span class="tip-category">Performance</span>
+                    <h3>Optimize Images for Faster Loading</h3>
+                    <img src="assets/images/optimize-images.jpg" alt="Image optimization example">
+                    <p>Learn how to compress and properly format images to reduce load times without sacrificing quality. Use modern formats like WebP for better performance.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+                
+                <div class="tip-card">
+                    <span class="tip-category">UX Design</span>
+                    <h3>Improve Your Site Navigation</h3>
+                    <img src="assets/images/navigation-design.jpg" alt="Website navigation example">
+                    <p>Discover best practices for creating intuitive navigation that helps users find what they need quickly. Includes mobile navigation patterns.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+                
+                <div class="tip-card">
+                    <span class="tip-category">SEO</span>
+                    <h3>Mobile-First Design for Better Rankings</h3>
+                    <img src="assets/images/mobile-design.jpg" alt="Mobile responsive design">
+                    <p>With Google's mobile-first indexing, learn how to ensure your site delivers an excellent experience on all devices for better search rankings.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="all-tips">
+            <div class="section-header">
+                <h2>All Design Tips</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <span class="tip-category">Color Theory</span>
+                    <h3>Choosing the Right Color Palette</h3>
+                    <p>How to select colors that reflect your brand and create the right emotional response from visitors.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+                
+                <div class="tip-card">
+                    <span class="tip-category">Typography</span>
+                    <h3>Font Pairing Techniques</h3>
+                    <p>Professional techniques for combining fonts that enhance readability and visual hierarchy.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+                
+                <div class="tip-card">
+                    <span class="tip-category">Conversion</span>
+                    <h3>Effective Call-to-Action Design</h3>
+                    <p>Strategies for creating CTAs that stand out and compel visitors to take action.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+                
+                <div class="tip-card">
+                    <span class="tip-category">Accessibility</span>
+                    <h3>Designing for All Users</h3>
+                    <p>Essential accessibility practices to ensure your website can be used by everyone.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+                
+                <div class="tip-card">
+                    <span class="tip-category">Content</span>
+                    <h3>Writing for the Web</h3>
+                    <p>How to structure and write content that engages visitors and improves SEO.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+                
+                <div class="tip-card">
+                    <span class="tip-category">Performance</span>
+                    <h3>Reducing JavaScript Bloat</h3>
+                    <p>Techniques to optimize your JavaScript for faster page rendering.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" style="background: none; padding-top: 0;">
+            <div class="cta-container">
+                <div class="cta-content">
+                    <h2>Want More Professional Tips?</h2>
+                    <p>Subscribe to our newsletter for weekly web design insights</p>
+                    <div class="form-group" style="max-width: 400px; margin: 0 auto;">
+                        <input type="email" placeholder="Your email address" class="form-input">
+                        <button class="cta-btn" style="width: 100%; margin-top: 1rem;">
+                            <span class="btn-text">Subscribe</span>
+                            <span class="btn-arrow">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Reuse your footer from index.html -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo" aria-label="Example Home">
+                    <svg viewBox="0 0 100 100" class="logo-svg">
+                        <path d="M20,50 Q50,20 80,50 Q50,80 20,50" fill="none" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    Example<span class="logo-dot">.</span>
+                </a>
+                <p class="footer-mission">Empowering small businesses with beautiful, effective websites.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <!-- <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> -->
+                </div>
+            </div>
+
+            <div class="footer-links-container">
+                <div class="footer-links-group">
+                    <h3 class="footer-links-title">Product</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#how-it-works">How It Works</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <!-- <li><a href="#">Pricing</a></li> -->
+                        <li><a href="#">Examples</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h3 class="footer-links-title">Resources</h3>
+                    <ul class="footer-links">
+                        <!-- <li><a href="#">Blog</a></li>
+                        <li><a href="#">Guides</a></li> -->
+                        <li><a href="help-center.html">Help Center</a></li>
+                        <li><a href="web-design-tips.html">Web Design Tips</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h3 class="footer-links-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <!-- <li><a href="#">Careers</a></li> -->
+                        <li><a href="index.html#cta-section">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">&copy; <span id="current-year"></span> Example. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Terms of Service</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+
+        <!-- Back to top button -->
+        <button class="back-to-top" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

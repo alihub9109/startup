@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center | Example</title>
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <style>
+        .help-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .help-category {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        .help-category:hover {
+            transform: translateY(-5px);
+        }
+        .help-category h3 {
+            color: var(--electric-indigo);
+            margin-bottom: 1rem;
+        }
+        .help-article {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .help-article:last-child {
+            border-bottom: none;
+        }
+        .search-help {
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Reuse your header from index.html -->
+    <header class="main-header">
+         <div class="nav-container">
+            <a href="#" class="logo" aria-label="Example Home">
+                <svg viewBox="0 0 100 100" class="logo-svg">
+                    <path d="M20,50 Q50,20 80,50 Q50,80 20,50" fill="none" stroke="currentColor" stroke-width="2" />
+                </svg>
+                Example<span class="logo-dot">.</span>
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+                    <li><a href="index.html#features" class="nav-link">Features</a></li>
+                    <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                    <!-- <li><a href="#testimonials" class="nav-link">Testimonials</a></li> -->
+                    <li><a href="index.html#cta-section" class="nav-link contact-link">Get Started</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="help-center-main">
+        <section class="section-header">
+            <h1>Help Center</h1>
+            <p>Find answers to common questions and get support for your website</p>
+            <div class="section-divider"></div>
+            
+            <div class="search-help">
+                <div class="form-group">
+                    <input type="text" placeholder="Search help articles..." class="form-input">
+                    <button class="cta-btn" style="width: 100%">
+                        <span class="btn-text">Search</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="help-categories">
+            <div class="help-category">
+                <h3>Getting Started</h3>
+                <div class="help-article">
+                    <h4><a href="#">How to set up your new website</a></h4>
+                    <p>Step-by-step guide to launching your AI-generated site</p>
+                </div>
+                <div class="help-article">
+                    <h4><a href="#">Connecting your domain</a></h4>
+                    <p>Instructions for pointing your custom domain to your site</p>
+                </div>
+                <div class="help-article">
+                    <h4><a href="#">Adding your first content</a></h4>
+                    <p>Learn how to edit and customize your website</p>
+                </div>
+            </div>
+
+            <div class="help-category">
+                <h3>Troubleshooting</h3>
+                <div class="help-article">
+                    <h4><a href="#">Site not loading properly</a></h4>
+                    <p>Common fixes for display issues</p>
+                </div>
+                <div class="help-article">
+                    <h4><a href="#">Login problems</a></h4>
+                    <p>Solutions for when you can't access your dashboard</p>
+                </div>
+                <div class="help-article">
+                    <h4><a href="#">Form submission issues</a></h4>
+                    <p>What to do when contact forms aren't working</p>
+                </div>
+            </div>
+
+            <div class="help-category">
+                <h3>Advanced Features</h3>
+                <div class="help-article">
+                    <h4><a href="#">SEO optimization</a></h4>
+                    <p>Maximize your search engine visibility</p>
+                </div>
+                <div class="help-article">
+                    <h4><a href="#">E-commerce setup</a></h4>
+                    <p>Guide to adding online payments</p>
+                </div>
+                <div class="help-article">
+                    <h4><a href="#">Custom code integration</a></h4>
+                    <p>How to add your own HTML/CSS/JavaScript</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" style="background: none; padding-top: 0;">
+            <div class="cta-container">
+                <div class="cta-content">
+                    <h2>Still need help?</h2>
+                    <p>Our support team is available 24/7 to assist you</p>
+                    <button class="cta-btn magnetic-btn">
+                        <span class="btn-text">Contact Support</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Reuse your footer from index.html -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo" aria-label="Example Home">
+                    <svg viewBox="0 0 100 100" class="logo-svg">
+                        <path d="M20,50 Q50,20 80,50 Q50,80 20,50" fill="none" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    Example<span class="logo-dot">.</span>
+                </a>
+                <p class="footer-mission">Empowering small businesses with beautiful, effective websites.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <!-- <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> -->
+                </div>
+            </div>
+
+            <div class="footer-links-container">
+                <div class="footer-links-group">
+                    <h3 class="footer-links-title">Product</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html#how-it-works">How It Works</a></li>
+                        <li><a href="index.html#features">Features</a></li>
+                        <!-- <li><a href="#">Pricing</a></li> -->
+                        <li><a href="#">Examples</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h3 class="footer-links-title">Resources</h3>
+                    <ul class="footer-links">
+                        <!-- <li><a href="#">Blog</a></li>
+                        <li><a href="#">Guides</a></li> -->
+                        <li><a href="help-center.html">Help Center</a></li>
+                        <li><a href="web-design-tips.html">Web Design Tips</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h3 class="footer-links-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <!-- <li><a href="#">Careers</a></li> -->
+                        <li><a href="index.html#cta-section">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">&copy; <span id="current-year"></span> Example. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Terms of Service</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+
+        <!-- Back to top button -->
+        <button class="back-to-top" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
